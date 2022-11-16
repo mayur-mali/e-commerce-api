@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/ecommerce", (err) => {
-  if (err) {
-    console.log(err);
-  } else {
+mongoose
+  .connect(process.env.MONGO_URL || "mongodb://localhost/e-commerce_db", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
     console.log("connected to mongodb");
-  }
-});
+  })
+  .catch((err) => {
+    console.log(err);
+  });
