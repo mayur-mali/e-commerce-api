@@ -7,3 +7,9 @@
 
 - Now just clone repo. from github
 - After cloning just go to terminal and run `npm install` it will install all required dependencies
+- Next if you have mongodb online database just create .env file and add your connect link with variable `MONGO_URL` otherwise just leave it . it will create local database.
+- Now , Just Run npm start to run project
+
+This project hosted on cloud also you can directly access from given link
+
+[E-Commerce API](www.google.com)
